@@ -173,6 +173,14 @@ class TestDatabaseFunctions(unittest.TestCase):
                 self.uuid,
                 "",
                 self.dynamodb))
+        
+         self.assertRaises(
+            Exception,
+            update_item(
+                updated_text,
+                self.uuid,
+                "",
+                ""))
         print ('End: atest_update_todo_error')
 
     def test_delete_todo(self):
