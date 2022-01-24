@@ -82,7 +82,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         self.assertRaises(Exception, put_item("", self.dynamodb))
         self.assertRaises(Exception, put_item("", self.dynamodb))
         print ('End: test_put_todo_error')
-        response = put_item("", self.dynamodb)
+        response = put_item(7, self.dynamodb)
         print ('Response pete put_item:' + str(response))
         print ('provocamos error linea 68-69')
         self.assertRaises(Exception, put_item(7, ""))
