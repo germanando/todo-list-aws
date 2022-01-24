@@ -104,6 +104,11 @@ class TestDatabaseFunctions(unittest.TestCase):
             self.text,
             responseGet['text'])
         print ('End: test_get_todo')
+        print ('provocamos error lineas 33-34')
+        responseGet = get_item(
+            idItem,
+            "")
+        
     
     def test_list_todo(self):
         print ('---------------------')
@@ -173,7 +178,7 @@ class TestDatabaseFunctions(unittest.TestCase):
                 self.uuid,
                 "",
                 self.dynamodb))
-        print ('prueba error')
+        print ('provocamos error para probar las lineas de control de errores 97-98')
         self.assertRaises(
             Exception,
             update_item(
