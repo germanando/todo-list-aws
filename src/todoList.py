@@ -18,11 +18,7 @@ def get_table(dynamodb=None):
         dynamodb = boto3.resource("dynamodb")
     # fetch todo from the database
     table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])
-    return table
 
-def get_table_dos(dynamodb=None):
-    if not dynamodb:
-        return 'hay dynamodb'
 def get_item(key, dynamodb=None):
     table = get_table(dynamodb)
     try:
