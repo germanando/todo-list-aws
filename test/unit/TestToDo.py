@@ -44,7 +44,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         #self.table_local.delete()
         self.dynamodb = None
         print ('End: tearDown')
-        
+        #german
     def test_get_table(self):
         print('---------------------')
         print('Start: test_get_table')
@@ -53,6 +53,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         response = get_table(self.dynamodb)
         print('Response get_table:' + str(response))
         self.assertIn(tableName, str(response))       
+        self.assertIn(str(response),tableName)
         print('End: test_get_table')
 
     def test_table_exists(self):
