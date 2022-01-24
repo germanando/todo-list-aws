@@ -178,9 +178,9 @@ class TestDatabaseFunctions(unittest.TestCase):
             Exception,
             update_item(
                 updated_text,
+                self.uuid,
                 "",
-                "",
-                self.dynamodb))
+                ""))
         
   
         print ('End: atest_update_todo_error')
