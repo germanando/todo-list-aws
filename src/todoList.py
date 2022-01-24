@@ -23,7 +23,6 @@ def get_table(dynamodb=None):
 def get_table_dos(dynamodb=None):
     if not dynamodb:
         return 'hay dynamodb'
-    
 def get_item(key, dynamodb=None):
     table = get_table(dynamodb)
     try:
