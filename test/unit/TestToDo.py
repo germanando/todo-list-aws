@@ -82,8 +82,8 @@ class TestDatabaseFunctions(unittest.TestCase):
         self.assertRaises(Exception, put_item("", self.dynamodb))
         self.assertRaises(Exception, put_item("", self.dynamodb))
         print ('End: test_put_todo_error')
-        print ('provocamos error linea 68-69')
-        self.assertRaises(Exception, put_item("", ""))
+        #print ('provocamos error linea 68-69')
+        #self.assertRaises(Exception, put_item("", ""))
 
     def test_get_todo(self):
         print ('---------------------')
