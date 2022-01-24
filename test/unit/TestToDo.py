@@ -178,7 +178,7 @@ class TestDatabaseFunctions(unittest.TestCase):
             Exception,
             update_item(
                 updated_text,
-                self.uuid,
+                "",
                 "",
                 self.dynamodb))
         
