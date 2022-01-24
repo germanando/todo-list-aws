@@ -46,6 +46,7 @@ def get_items(dynamodb=None):
 
 
 def put_item(text, dynamodb=None):
+    try:
     table = get_table(dynamodb)
     timestamp = str(time.time())
     print('Table name:' + table.name)
@@ -56,7 +57,7 @@ def put_item(text, dynamodb=None):
         'createdAt': timestamp,
         'updatedAt': timestamp,
     }
-    try:
+    #try:
         # write the todo to the database
         table.put_item(Item=item)
         # create a response
