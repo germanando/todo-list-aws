@@ -49,9 +49,8 @@ class TestDatabaseFunctions(unittest.TestCase):
         print('---------------------')
         print('Start: test_get_table')
         from src.todoList import get_table
-        from src.todoList import get_table_dos        
-        response = get_table_dos(self.dynamodb)
-        print('Response get_table_dos:' + str(response))
+        response = os.environ['ENDPOINT_OVERRIDE']
+        print('valor de ENDPOINT_OVERRIDE:' + str(response))
         tableName = os.environ['DYNAMODB_TABLE'];
         response = get_table(self.dynamodb)
         print('Response get_table:' + str(response))
