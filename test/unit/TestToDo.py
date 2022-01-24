@@ -96,8 +96,8 @@ class TestDatabaseFunctions(unittest.TestCase):
         idItem = json.loads(responsePut['body'])['id']
         print ('Id item:' + idItem)
         self.assertEqual(200, responsePut['statusCode'])
-        print ('provocamos error lineas 68-69')
-        responsePut = put_item(self.text, "")
+        #print ('provocamos error lineas 68-69')
+        #responsePut = put_item(self.text, "")
         responseGet = get_item(
                 idItem,
                 self.dynamodb)
