@@ -20,6 +20,10 @@ def get_table(dynamodb=None):
     table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])
     return table
 
+def get_table2(dynamodb=None):
+    if not dynamodb:
+        return 'hay dynamodb'
+
 
 def get_item(key, dynamodb=None):
     table = get_table(dynamodb)
