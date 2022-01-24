@@ -107,9 +107,11 @@ class TestDatabaseFunctions(unittest.TestCase):
             responseGet['text'])
         print ('End: test_get_todo')
         print ('provocamos error lineas 33-34')
-        responseGet = get_item(
-            idItem,
-            "")
+        self.assertRaises(
+            Exception,
+            get_item(
+                idItem,                
+                ""))
         
     
     def test_list_todo(self):
