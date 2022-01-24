@@ -83,7 +83,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         self.assertRaises(Exception, put_item("", self.dynamodb))
         print ('End: test_put_todo_error')
         print ('provocamos error linea 68-69')
-        self.assertRaises(Exception, put_item("", ""))
+        self.assertRaises(Exception, put_item(7, ""))
 
     def test_get_todo(self):
         print ('---------------------')
@@ -99,7 +99,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         print ('Id item:' + idItem)
         self.assertEqual(200, responsePut['statusCode'])
         #print ('provocamos error lineas 68-69')
-        #responsePut = put_item(self.text, "")
+        #responsePut = put_item(7, "")
         responseGet = get_item(
                 idItem,
                 self.dynamodb)
