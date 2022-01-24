@@ -180,7 +180,7 @@ class TestDatabaseFunctions(unittest.TestCase):
             update_item(
                 updated_text,
                 "xxx",
-                "",
+                self.uuid,
                 self.dynamodb))
         print ('End: atest_update_todo_error')
 
