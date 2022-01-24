@@ -49,11 +49,13 @@ class TestDatabaseFunctions(unittest.TestCase):
         print('---------------------')
         print('Start: test_get_table')
         from src.todoList import get_table
+        from src.todoList import get_table2        
+        response = get_table2(self.dynamodb)
+        print('Response get_table2:' + str(response))
         tableName = os.environ['DYNAMODB_TABLE'];
         response = get_table(self.dynamodb)
         print('Response get_table:' + str(response))
-        self.assertIn(tableName, str(response))       
-        self.assertIn(str(response),tableName)
+        self.assertIn(tableName, str(response))               
         print('End: test_get_table')
 
     def test_table_exists(self):
