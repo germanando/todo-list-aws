@@ -49,8 +49,10 @@ class TestDatabaseFunctions(unittest.TestCase):
         print('---------------------')
         print('Start: test_get_table')
         from src.todoList import get_table
+        tableName = os.environ['DYNAMODB_TABLE'];
         response = get_table(self.dynamodb)
         print('Response get_table:' + str(response))
+        self.assertIn(tableName, str(response))       
         print('End: test_get_table')
 
     def test_table_exists(self):
@@ -59,7 +61,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         #self.assertTrue(self.table)  # check if we got a result
         #self.assertTrue(self.table_local)  # check if we got a result
 
-        print('Table name:' + self.table.name)
+        print('Table name:' + self.table.name) 
         tableName = os.environ['DYNAMODB_TABLE'];
         # check if the table name is 'ToDo'
         self.assertIn(tableName, self.table.name)
