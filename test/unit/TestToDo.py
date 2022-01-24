@@ -66,7 +66,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         from src.todoList import put_item
         # Table local
         print('EL PETE')
-        response = put_item(self.text, "")
+        response = put_item(self.dynamodb, self.text)
         print ('Response put_item PETE:' + str(response))
             
         response = put_item(self.text, self.dynamodb)
