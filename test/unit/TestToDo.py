@@ -65,10 +65,6 @@ class TestDatabaseFunctions(unittest.TestCase):
         # Testing file functions
         from src.todoList import put_item
         # Table local
-        print('EL PETE')
-        response = put_item(self.dynamodb, self.text)
-        print ('Response put_item PETE:' + str(response))
-            
         response = put_item(self.text, self.dynamodb)
         print ('Response put_item:' + str(response))
         self.assertEqual(200, response['statusCode'])        
@@ -86,6 +82,8 @@ class TestDatabaseFunctions(unittest.TestCase):
         self.assertRaises(Exception, put_item("", self.dynamodb))
         self.assertRaises(Exception, put_item("", self.dynamodb))
         print ('End: test_put_todo_error')
+        response = put_item("", self.dynamodb)
+        print ('Response pete put_item:' + str(response))
         print ('provocamos error linea 68-69')
         self.assertRaises(Exception, put_item(7, ""))
 
