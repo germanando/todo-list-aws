@@ -174,7 +174,8 @@ class TestDatabaseFunctions(unittest.TestCase):
                 "",
                 self.dynamodb))
         
-         self.assertRaises( #probocamos error
+        print ('prueba error')
+         self.assertRaises( #provocamos error
             Exception,
             update_item(
                 updated_text,
