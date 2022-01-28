@@ -113,7 +113,7 @@ class TestDatabaseFunctions(unittest.TestCase):
         print ('Id item:' + idItem)
         self.assertEqual(200, responsePut['statusCode'])
         print ('provocamos error lineas 68-69')
-        responsePut = put_item(None, None)
+        responsePut = put_item(None, self.dynamodb)
         self.assertEqual(500, responsePut['statusCode'])
         
         responseGet = get_item(
