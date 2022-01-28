@@ -211,7 +211,7 @@ class TestDatabaseFunctions(unittest.TestCase):
                 self.uuid,
                 "",
                 "")
-        print ('xx' result)
+        print ('xx' + str(result))
          #self.assertEqual('Error',result)
         
   
