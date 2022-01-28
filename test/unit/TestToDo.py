@@ -211,10 +211,7 @@ class TestDatabaseFunctions(unittest.TestCase):
                 self.uuid,
                 "",
                 "")
-        print ('xx' + str(result))
-         #self.assertEqual('Error',result)
-        
-  
+         
         print ('End: atest_update_todo_error')
 
     def test_delete_todo(self):
