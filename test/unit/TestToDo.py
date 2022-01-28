@@ -206,6 +206,11 @@ class TestDatabaseFunctions(unittest.TestCase):
                 self.uuid,
                 "",
                 ""))
+         self.assertEqual('Error',update_item(
+                updated_text,
+                self.uuid,
+                "",
+                "")))
         
   
         print ('End: atest_update_todo_error')
