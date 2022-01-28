@@ -67,6 +67,10 @@ def put_item(text, dynamodb=None):
 
     except ClientError as e:
         print(e.response['Error']['Message'])
+        response = {
+            "statusCode": 500,
+            "body": ""
+        }
     else:
         return response
 
