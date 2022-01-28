@@ -210,7 +210,7 @@ class TestDatabaseFunctions(unittest.TestCase):
                 updated_text,
                 self.uuid,
                 "",
-                ""))
+                "")
          self.assertEqual('Error',result)
         
   
